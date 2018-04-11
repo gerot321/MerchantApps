@@ -44,7 +44,7 @@ public class VolumeFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 5;
+            return 4;
         }
 
         @Override
@@ -53,13 +53,12 @@ public class VolumeFragment extends Fragment {
                 case 0:
                     return new TabGeoCone();
                 case 1:
-                    return new TabGeoCone();
+                    return new TabGeometry();
                 case 2:
                     return new TabGeoCone();
                 case 3:
                     return new TabGeoCone();
-                case 4:
-                    return new TabGeoCone();
+
             }
             return null;
         }
@@ -68,15 +67,14 @@ public class VolumeFragment extends Fragment {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "addProduct";
+                    return "List Product";
                 case 1:
-                    return "orderHistory";
+                    return "Reimburse Saldo";
                 case 2:
-                    return "tess";
+                    return "Reimburese History";
                 case 3:
-                    return "tesss";
-                case 4:
-                    return "tessss";
+                    return "Order History";
+
             }
             return "";
         }

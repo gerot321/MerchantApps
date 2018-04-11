@@ -4,20 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/ic"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/ic_github" />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/id"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fontAppCompatTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:hint="Reimburse Amount"
+        android:inputType="text"
+        android:textColorHint="@android:color/white"
+        android:textSize="26sp" />
 
     <com.pixplicity.fontview.FontAppCompatTextView
+        android:id="@+id/fontAppCompatTextView"
         style="@style/FontTextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ic"
-        android:layout_marginTop="16dp"
-        android:layout_centerInParent="true"
-        android:text="Ismail Xebia" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="123dp"
+        android:text="1000000" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="147dp"
+        android:text="Reinburse" />
 
 </RelativeLayout>

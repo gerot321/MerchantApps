@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.gerrys.merchantapps.Model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -53,8 +54,9 @@ public class SignUp extends AppCompatActivity {
                         }else {
                             mDialog.dismiss();
 
-                           // User user = new User(etName.getText().toString(), etPassword.getText().toString(), "Merchant");
-                            //table_user.child(etPhone.getText().toString()).setValue(user);
+                           User user = new User(etName.getText().toString(), etPassword.getText().toString(), "Merchant",
+                                   "0"," "," "," "," "," "," "," ");
+                            table_user.child(etPhone.getText().toString()).setValue(user);
                             Toast.makeText(SignUp.this, "Account successfully created!", Toast.LENGTH_SHORT).show();
                             finish();
                         }

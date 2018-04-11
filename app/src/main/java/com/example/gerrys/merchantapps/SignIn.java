@@ -64,7 +64,7 @@ public class SignIn extends AppCompatActivity {
                                 intent.putExtra("MerchantId",user.getPhone() );
                                 Common.currentUser = user;
                                 startActivity(intent);
-                                finish();
+
 
                             } else {
                                 Toast.makeText(SignIn.this, "Sign in failed!", Toast.LENGTH_SHORT).show();
