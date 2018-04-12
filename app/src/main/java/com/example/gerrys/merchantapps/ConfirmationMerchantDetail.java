@@ -29,7 +29,7 @@ public class ConfirmationMerchantDetail extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference confirm,request,prodReq,prod;
-    String ID;
+    String ID,merchId;
     productRequest prodss;
     FirebaseRecyclerAdapter<Confirmation, ConfirmationViewHolder> adapter;
     TextView reqId,prodId,prodName,prodQty,prodAddrs,prodPrice;
@@ -47,7 +47,7 @@ public class ConfirmationMerchantDetail extends AppCompatActivity {
         prodQty = (TextView)findViewById(R.id.prodQty);
         prodAddrs = (TextView)findViewById(R.id.addrs);
         prodPrice = (TextView)findViewById(R.id.prodPrice);
-
+        merchId = getIntent().getStringExtra("merch");
 
 
         ConfirmButton = (CardView)findViewById(R.id.confirmPayment);
@@ -86,6 +86,7 @@ public class ConfirmationMerchantDetail extends AppCompatActivity {
 
 
                 Intent intent = new Intent(ConfirmationMerchantDetail.this,ConfirmationMerchant.class);
+                intent.putExtra("merch",merchId);
                 startActivity(intent);
             }
         });

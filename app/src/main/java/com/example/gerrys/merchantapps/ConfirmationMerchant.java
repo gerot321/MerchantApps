@@ -32,7 +32,7 @@ public class ConfirmationMerchant extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmation_status);
-
+        mercId = getIntent().getStringExtra("merch");
 
         database = FirebaseDatabase.getInstance();
         confirm = database.getReference("Requests");
@@ -75,6 +75,7 @@ public class ConfirmationMerchant extends AppCompatActivity {
                     public void onClick(View view, int position, boolean isLongCLick) {
                         Intent intent = new Intent(ConfirmationMerchant.this, ConfirmationMerchantDetail.class);
                         intent.putExtra("ConfirmationId", adapter.getRef(position).getKey());
+                        intent.putExtra("merch",mercId);
                         startActivity(intent);
                     }
                 });

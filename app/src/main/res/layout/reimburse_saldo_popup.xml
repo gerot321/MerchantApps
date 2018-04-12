@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="220dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/namepro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="35dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/OvoId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="OVO ID"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/dit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nama Akun" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="5dp">
+
+        <Button
+            android:id="@+id/oke12"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_margin="5dp"
+            android:text="OKE"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/cancan"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_margin="5dp"
+            android:text="Close"
+            android:textStyle="bold" />
+    </FrameLayout>
+</LinearLayout>

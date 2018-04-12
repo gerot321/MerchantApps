@@ -103,6 +103,10 @@ public class MainActivityMerchant extends AppCompatActivity
             mPrevSelectedId = itemId;
             setTitle(R.string.nav_reward);
             navFragment = new VolumeFragment();
+            Bundle bun =  new Bundle();
+            bun.putString("MerchantId",mercId);
+            navFragment.setArguments(bun);
+
             break;
             case R.id.nav_2:
                 Intent intent = new Intent(MainActivityMerchant.this, ConfirmationMerchant.class);

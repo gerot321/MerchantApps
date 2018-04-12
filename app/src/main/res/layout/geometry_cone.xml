@@ -5,10 +5,10 @@
     android:layout_height="match_parent">
 
     <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/id"
+        android:id="@+id/amount"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/fontAppCompatTextView"
+        android:layout_below="@+id/saldo_amount"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         android:hint="Reimburse Amount"
@@ -17,7 +17,7 @@
         android:textSize="26sp" />
 
     <com.pixplicity.fontview.FontAppCompatTextView
-        android:id="@+id/fontAppCompatTextView"
+        android:id="@+id/saldo_amount"
         style="@style/FontTextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
