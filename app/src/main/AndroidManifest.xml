@@ -23,6 +23,8 @@
 
         <activity android:name=".ConfirmationMerchant" />
         <activity android:name=".ConfirmationMerchantDetail" />
+        <activity android:name=".ProductList"/>
+        <activity android:name=".EditProduct"/>
 
     </application>
 

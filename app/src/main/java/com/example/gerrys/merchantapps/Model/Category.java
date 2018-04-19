@@ -10,18 +10,35 @@ public class Category {
     private String Password;
     private String Origin;
     private String Phone;
+    private String Saldo;
 
     public Category(){
 
     }
 
-    public Category(String name, String image,String password,String origin) {
+    public Category(String name, String image,String password,String origin,String saldo) {
         Name = name;
         Image = image;
         Password = password;
         Origin = origin;
+        Saldo = saldo;
     }
 
+    public String getSaldo() {
+        return Saldo;
+    }
+
+    public String getOrigin() {
+        return Origin;
+    }
+
+    public void setOrigin(String origin) {
+        Origin = origin;
+    }
+
+    public void setSaldo(String saldo) {
+        Saldo = saldo;
+    }
 
     public String getPassword() {
         return Password;

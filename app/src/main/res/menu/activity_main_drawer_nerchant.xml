@@ -9,6 +9,10 @@
             android:id="@+id/nav_2"
             android:icon="@drawable/ic_format_line_style_black_48dp"
             android:title="OrederList Merchant" />
+        <item
+            android:id="@+id/nav_3"
+            android:icon="@drawable/ic_format_line_style_black_48dp"
+            android:title="Product List" />
 
 
     </group>
@@ -21,7 +25,7 @@
                     android:checkable="true"
                     android:id="@+id/nav_6"
                     android:icon="@drawable/ic_person"
-                    android:title="About Us" />
+                    android:title="Add Product" />
             </group>
         </menu>
     </item>

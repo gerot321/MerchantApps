@@ -21,6 +21,7 @@ import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.LinearLayout;
 
+import com.example.gerrys.merchantapps.Fragment.ReimburseSaldo;
 import com.example.gerrys.merchantapps.Fragment.VolumeFragment;
 
 public class MainActivityMerchant extends AppCompatActivity
@@ -102,7 +103,7 @@ public class MainActivityMerchant extends AppCompatActivity
 
             mPrevSelectedId = itemId;
             setTitle(R.string.nav_reward);
-            navFragment = new VolumeFragment();
+            navFragment = new ReimburseSaldo();
             Bundle bun =  new Bundle();
             bun.putString("MerchantId",mercId);
             navFragment.setArguments(bun);
@@ -114,6 +115,13 @@ public class MainActivityMerchant extends AppCompatActivity
                 startActivity(intent);
                 mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
                 return;
+            case R.id.nav_3:
+                intent = new Intent(MainActivityMerchant.this, ProductList.class);
+                intent.putExtra("merch", mercId );
+                startActivity(intent);
+                mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
+                return;
+
             //case R.id.nav_5:
             //startActivity(new Intent(this, SettingsActivity.class));
             //mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
