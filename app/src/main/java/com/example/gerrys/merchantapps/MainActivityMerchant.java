@@ -121,6 +121,12 @@ public class MainActivityMerchant extends AppCompatActivity
                 startActivity(intent);
                 mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
                 return;
+            case R.id.nav_4:
+                intent = new Intent(MainActivityMerchant.this, ReimburseMerchantHistory.class);
+                intent.putExtra("merch", mercId );
+                startActivity(intent);
+                mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
+                return;
 
             //case R.id.nav_5:
             //startActivity(new Intent(this, SettingsActivity.class));

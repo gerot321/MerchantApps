@@ -13,6 +13,10 @@
             android:id="@+id/nav_3"
             android:icon="@drawable/ic_format_line_style_black_48dp"
             android:title="Product List" />
+        <item
+            android:id="@+id/nav_4"
+            android:icon="@drawable/ic_format_line_style_black_48dp"
+            android:title="Reimburse History" />
 
 
     </group>
