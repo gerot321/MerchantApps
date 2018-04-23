@@ -39,9 +39,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
+            android:layout_gravity="center|right"
             android:layout_margin="5dp"
-            android:text="OKE"
+            android:text="Oke"
             android:textStyle="bold" />
 
         <Button
@@ -49,9 +49,10 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|right"
+            android:layout_gravity="center|left"
             android:layout_margin="5dp"
             android:text="Close"
             android:textStyle="bold" />
+
     </FrameLayout>
 </LinearLayout>

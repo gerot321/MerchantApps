@@ -54,6 +54,7 @@ public class Category {
     public void setPhone(String phone) {
         Phone = phone;
     }
+
     public String getName() {
         return Name;
     }
@@ -69,4 +70,8 @@ public class Category {
     public void setImage(String image) {
         Image = image;
     }
+
+
+
+
 }

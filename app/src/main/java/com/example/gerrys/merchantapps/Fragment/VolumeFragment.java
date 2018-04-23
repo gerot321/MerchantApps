@@ -21,7 +21,7 @@ public class VolumeFragment extends Fragment {
 
     private static ViewPager mPager;
     private TabLayout mTabLayout;
-
+    private String ID;
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab_volume, container, false);
@@ -29,8 +29,14 @@ public class VolumeFragment extends Fragment {
         mTabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
 
         mPager.setAdapter(new TabsAdapter(getChildFragmentManager()));
-        mTabLayout.setupWithViewPager(mPager);
 
+
+        mTabLayout.setupWithViewPager(mPager);
+        Bundle bundle = this.getArguments();
+        ID = bundle.getString("MerchantId");
+
+       // Log.d("IDDDDDDDDDDDDDDDDDD", ID);
+        //fragment.setID(ID);
         setHasOptionsMenu(true);
 
         return view;
@@ -51,7 +57,11 @@ public class VolumeFragment extends Fragment {
         public Fragment getItem(int i) {
             switch (i) {
                 case 0:
-                    return new TabGeoCone();
+                    ReimburseSaldo geo = new ReimburseSaldo();
+                    Bundle bun =  new Bundle();
+                    bun.putString("MerchantId",ID);
+                    geo.setArguments(bun);
+                    return geo;
                 case 1:
                     return new ReimburseSaldo();
                 case 2:

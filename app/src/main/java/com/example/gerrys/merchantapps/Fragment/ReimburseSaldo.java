@@ -12,14 +12,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.gerrys.merchantapps.Model.Category;
 import com.example.gerrys.merchantapps.Model.ReimburseReq;
 import com.example.gerrys.merchantapps.R;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 /**
  * Created by Admin on 5/25/2016.
@@ -29,7 +25,7 @@ public class ReimburseSaldo extends Fragment {
     EditText ReimburseAmount;
     TextView tv_saldo;
     Button oke;
-    DatabaseReference reimburse,category;
+    DatabaseReference reimburse;
     FirebaseDatabase database;
     private Dialog MyDialog;
     double vol, luas, kel;
@@ -41,31 +37,14 @@ public class ReimburseSaldo extends Fragment {
         View v = inflater.inflate(R.layout.geometry_cone, container, false);
         ReimburseAmount = (EditText)v.findViewById(R.id.amount);
         tv_saldo = (TextView) v.findViewById(R.id.saldo_amount);
-
-
-
         oke = (Button) v.findViewById(R.id.button2);
         database = FirebaseDatabase.getInstance();
         reimburse = database.getReference("ReimbureseReq");
-        category =  database.getReference("Category");
-
         ID = getArguments().getString("MerchantId");
-        category.child(ID).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Category cat = dataSnapshot.getValue(Category.class);
-                tv_saldo.setText(cat.getSaldo());
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
         oke.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View view) {
-                MyDialog = new Dialog(getContext());
+                MyDialog = new Dialog(getActivity().getApplicationContext());
                 MyDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 MyDialog.setContentView(R.layout.reimburse_saldo_popup);
                 MyDialog.setTitle("Reimburse Saldo");
@@ -80,8 +59,6 @@ public class ReimburseSaldo extends Fragment {
                     public void onClick(View view) {
                         ReimburseReq reqs= new ReimburseReq(ID,ovoID.getText().toString(),AN.getText().toString(),"Waiting"," ",ReimburseAmount.getText().toString());
                         reimburse.push().setValue(reqs);
-                        ReimburseAmount.setText(" ");
-                        MyDialog.cancel();
                     }
                 });
                 button2.setOnClickListener(new View.OnClickListener() {

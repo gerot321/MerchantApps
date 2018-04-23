@@ -4,35 +4,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/amount"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/saldo_amount"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:hint="Reimburse Amount"
-        android:inputType="number"
-        android:textColorHint="@android:color/white"
-        android:textSize="26sp" />
+    <LinearLayout
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="75dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <com.pixplicity.fontview.FontAppCompatTextView
-        android:id="@+id/saldo_amount"
-        style="@style/FontTextViewStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="123dp"
-        android:text="1000000" />
+        <com.pixplicity.fontview.FontAppCompatTextView
+            android:id="@+id/saldo_amount"
+            style="@style/FontTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="50dp"
+            android:text="1000000" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="147dp"
-        android:text="Reinburse" />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saldo_amount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:hint="Reimburse Amount"
+            android:inputType="number"
+            android:textColorHint="@android:color/white"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:layout_marginBottom="75dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:text="Reinburse" />
+    </LinearLayout>
 
 </RelativeLayout>

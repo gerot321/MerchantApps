@@ -48,6 +48,7 @@ public class MainActivityMerchant extends AppCompatActivity
         assert mNavigationView != null;
         mNavigationView.setNavigationItemSelectedListener(this);
         mercId = getIntent().getStringExtra("MerchantId");
+     ///   Log.d("IDDDDDDDDDDDDDDDDDD", mercId);
         ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this,
                 mDrawerLayout, mToolbar, R.string.navigation_drawer_open,
                 R.string.navigation_drawer_close) {
@@ -91,6 +92,7 @@ public class MainActivityMerchant extends AppCompatActivity
 
 
 
+
     private void navigate(final int itemId) {
         final View elevation = findViewById(R.id.elevation);
         Fragment navFragment = null;
@@ -100,15 +102,13 @@ public class MainActivityMerchant extends AppCompatActivity
 
         switch (itemId) {
             case R.id.nav_1:
-
-            mPrevSelectedId = itemId;
-            setTitle(R.string.nav_reward);
-            navFragment = new ReimburseSaldo();
-            Bundle bun =  new Bundle();
-            bun.putString("MerchantId",mercId);
-            navFragment.setArguments(bun);
-
-            break;
+                mPrevSelectedId = itemId;
+                setTitle(R.string.nav_reward);
+                navFragment = new ReimburseSaldo();
+                Bundle bun =  new Bundle();
+                bun.putString("MerchantId",mercId);
+                navFragment.setArguments(bun);
+                break;
             case R.id.nav_2:
                 Intent intent = new Intent(MainActivityMerchant.this, ConfirmationMerchant.class);
                 intent.putExtra("merch", mercId );
