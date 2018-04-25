@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 
     tools:context="com.example.gerrys.charperone.FrontActivity">
 
@@ -13,7 +14,20 @@
         android:orientation="vertical"
         android:layout_centerInParent="true">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="355dp"
+            android:layout_height="306dp"
+            app:srcCompat="@drawable/logob" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="Charperone Merchant" />
     </LinearLayout>
 
     <LinearLayout
